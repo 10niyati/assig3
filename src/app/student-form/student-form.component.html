@@ -1,0 +1,21 @@
+<p>Student form</p>
+
+<form  (ngSubmit)="handleSubmit()"> 
+    Name
+    <input [(ngModel)]="name" name="name"type="text"><br><br>
+    ContactNo
+    <input [(ngModel)]="contactno" name="contactno" type="number"><br><br>
+    Email
+    <input [(ngModel)]="email" name="email" type="email"><br><br>
+    Birthdate
+    <input [(ngModel)]="birthdate" name="birthdate" type="date"><br><br>
+    <button type="submit">Submit</button>
+</form>
+
+<div *ngIf="isSubmit">
+   Name : {{name}}<br>
+   Email :{{email}}<br>
+   ContactNo : {{contactno}}<br>
+   Birthdate : {{birthdate}}
+</div>
+
